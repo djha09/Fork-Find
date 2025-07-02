@@ -16,7 +16,7 @@ It is not compulsory to add each ingredient if they do not align with the recipe
 Based on these, generate a tasty recipe that can be made.
 Use minimum or no extra ingredients.
 If maximum of the Ingredients are not valid ingredients or no recipe can be generated you can say so
-Respond in **Markdown Format**.
+Return the response as a raw Markdown string (unescaped), so it can be passed directly into a Markdown renderer like react-markdown in React.
   `;
 
   const response = await client.chat.completions.create({

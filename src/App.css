@@ -1,0 +1,294 @@
+/* App.css */
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #fffaf5;
+  color: #333;
+}
+
+/* Center content vertically and horizontally */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.h2{
+  font-size: 1.5rem;          /* text-2xl */
+  font-weight: 700;           /* font-bold */
+  color: #2d3748;             /* gray-800 */
+  margin-bottom: 0.5rem;      /* mb-2 */
+  line-height: 1.2;
+}
+
+.p{
+   color: #718096;             /* gray-600 */
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  padding: auto;
+}
+/* Form styling */
+form {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  height: auto;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+/* Input field */
+input[type="text"] {
+  border-radius: 6px;
+  border: 1px solid #D1D5DB;
+  padding: 12px 16px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  flex-grow: 1;
+  min-width: 300px;
+  max-width: 650px;
+  font-size: 1.2rem;
+  background-color: white;
+  transition: border 0.2s;
+}
+
+input[type="text"]:focus {
+  border-color: #000;
+  outline: none;
+}
+
+/* Main add button */
+button {
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease, transform 0.2s;
+}
+
+button::before {
+  /* content: '+'; */
+  margin-right: 8px;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background-color: #222;
+}
+
+#all-ingredient {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem 1rem; /* vertical and horizontal spacing */
+  margin-top: 1rem;
+}
+
+#all-ingredient .capitalize {
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  background-color: #f9fafb; /* light gray bg */
+  padding: 0.4rem 0.8rem;
+  border-radius: 12px;
+  font-size: 1.4rem;
+  color: #333;
+  user-select: none;
+}
+
+#all-ingredient .capitalize .remove-btn {
+  margin-left: 0.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  transition: color 0.2s ease;
+  color: #666;
+}
+
+#all-ingredient .capitalize .remove-btn:hover {
+  color: #e53e3e; /* red-ish on hover */
+}
+
+.get-recipe-container {
+  margin-top: 2rem;
+  padding: 1.2rem 1.5rem;
+  background-color: #fff7ed; /* warm light orange */
+  border-radius: 12px;
+  border: 1.5px solid #f6ad55; /* orange border */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 600px;
+  gap: 1rem;
+}
+
+.get-recipe-container > div h3 {
+  margin: 0 0 0.3rem 0;
+  font-size: 1.6rem;
+  color: #dd6b20; /* darker orange */
+}
+
+.get-recipe-container > div p {
+  margin: 0;
+  color: #805ad5;
+  font-size: 1rem;
+}
+
+.get-recipe-container button {
+  background-color: #ed8936; /* orange */
+  color: white;
+  border: none;
+  padding: 0.7rem 1.4rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.get-recipe-container button:hover {
+  background-color: #dd6b20; /* darker on hover */
+}
+
+.remove-btn{
+  background-color: inherit;
+}
+.remove-btn:hover{
+  transform: scale(1.1);
+  background-color: inherit;
+  
+}
+
+/* "Get Recipe" container */
+.get-recipe-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  background: #F0EFEB;
+  padding: 12px 24px;
+  width: 100%;
+  margin-top: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.get-recipe-container h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0;
+  color: #222;
+}
+
+.get-recipe-container p {
+  color: #6B7280;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+/* Button inside get-recipe-container */
+.get-recipe-container button {
+  border: none;
+  border-radius: 6px;
+  background: #D17557;
+  color: #FAFAF8;
+  padding: 9px 17px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.get-recipe-container button:hover {
+  background-color: #b85f45;
+}
+.recipe-markdown {
+  background-color: #fffaf2;
+  border: 1px solid #eee;
+  padding: 1.5rem;
+  border-radius: 10px;
+  font-family: "Georgia", serif;
+  line-height: 1.7;
+  color: #333;
+  max-width: 700px;
+  margin: auto;
+}
+
+/* Markdown headings */
+.recipe-markdown h1,
+.recipe-markdown h2,
+.recipe-markdown h3 {
+  color: #b54b00;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.recipe-markdown h1 {
+  font-size: 2rem;
+}
+
+.recipe-markdown h2 {
+  font-size: 1.6rem;
+}
+
+/* Bold text */
+.recipe-markdown strong {
+  color: #000;
+  font-weight: 600;
+}
+
+/* Lists */
+.recipe-markdown ul {
+  padding-left: 1.5em;
+  list-style: disc;
+  margin-bottom: 1rem;
+}
+
+.recipe-markdown li {
+  margin-bottom: 0.5rem;
+}
+
+/* Paragraphs */
+.recipe-markdown p {
+  margin-bottom: 1rem;
+}
+
+/* Code blocks or inline code (if present) */
+/* .recipe-markdown code {
+  background-color: #f6f6f6;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: monospace;
+} */
+
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+  form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  input[type="text"] {
+    width: 100%;
+  }
+
+  .get-recipe-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .get-recipe-container button {
+    align-self: flex-end;
+  }
+}

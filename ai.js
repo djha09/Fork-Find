@@ -15,8 +15,7 @@ Try to align the recipe with the indian cuisine , if not possible with the ingre
 It is not compulsory to add each ingredient if they do not align with the recipe you can skip them.
 Based on these, generate a tasty recipe that can be made.
 Use minimum or no extra ingredients.
-If maximum of the Ingredients are not valid ingredients or no recipe can be generated you can say so
-Return the response as a raw Markdown string (unescaped), so it can be passed directly into a Markdown renderer like react-markdown in React.
+If maximum of the Ingredients are not valid ingredients or no recipe can be generated you can say so.
   `;
 
   const response = await client.chat.completions.create({

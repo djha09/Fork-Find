@@ -13,7 +13,7 @@ function App() {
     
     function handleSubmit(formData) {
         const newIngredient = formData.get('ingredient');
-        console.log(newIngredient);
+        if(!newIngredient) return;
          if (ingredient.includes(newIngredient)) {
             alert("Ingredient already added");
             

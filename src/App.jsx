@@ -8,13 +8,15 @@ import Recipe from './Recipe.jsx'
 import {getRecipe} from '../ai.js'
 
 function App() {
-    const [ingredient, setIngredient] = useState([]);
+    const [ingredient, setIngredient] = useState(["a",'b','c','d']);
     const [loading,setLoading] = useState(false)
     
     function handleSubmit(formData) {
         const newIngredient = formData.get('ingredient');
-        console.log(newIngredient);
-         if (ingredient.includes(newIngredient)) {
+        // console.log(newIngredient);
+        if(!newIngredient) return;
+        
+         if (ingredient.includes(newIngredient.toLowerCase())) {
             alert("Ingredient already added");
             
         } else {
@@ -59,6 +61,7 @@ function App() {
             {ingredient.length > 0 && 
             <Ingredient  
             ingredient={ingredient} 
+            count ={ingredient.length}
             toggleRecipe={toggleRecipe}
             remove={handleRemove} 
             loadin = {loading ? "Generating" : "Get A Recipe"} />}

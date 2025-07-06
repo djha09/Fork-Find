@@ -8,7 +8,7 @@ function Recipe(props) {
   return (
     <>
     <div className="recipe-markdown">
-      <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeRaw,rehypeSanitize]}>
+      <ReactMarkdown rehypePlugins={[remarkGfm]}>
         {props.recipe}
       </ReactMarkdown>
     </div>

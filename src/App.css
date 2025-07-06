@@ -83,153 +83,124 @@ button:hover {
   transform: scale(1.05);
   background-color: #222;
 }
-
-#all-ingredient {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.8rem 1rem; /* vertical and horizontal spacing */
-  margin-top: 1rem;
-}
-
-#all-ingredient .capitalize {
-  text-transform: capitalize;
-  display: flex;
-  align-items: center;
-  background-color: #f9fafb; /* light gray bg */
-  padding: 0.4rem 0.8rem;
-  border-radius: 12px;
-  font-size: 1.4rem;
-  color: #333;
-  user-select: none;
-}
-
-#all-ingredient .capitalize .remove-btn {
-  margin-left: 0.5rem;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  padding: 0;
-  transition: color 0.2s ease;
-  color: #666;
-}
-
-#all-ingredient .capitalize .remove-btn:hover {
-  color: #e53e3e; /* red-ish on hover */
-}
-
-.get-recipe-container {
-  margin-top: 2rem;
-  padding: 1.2rem 1.5rem;
-  background-color: #fff7ed; /* warm light orange */
-  border-radius: 12px;
-  border: 1.5px solid #f6ad55; /* orange border */
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 600px;
-  gap: 1rem;
-}
-
-.get-recipe-container > div h3 {
-  margin: 0 0 0.3rem 0;
-  font-size: 1.6rem;
-  color: #dd6b20; /* darker orange */
-}
-
-.get-recipe-container > div p {
+/* General resets and font */
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to bottom right, #fff7ed, #fef9c3, #dcfce7);
+  min-height: 100vh;
   margin: 0;
-  color: #805ad5;
-  font-size: 1rem;
+  padding: 0;
 }
 
-.get-recipe-container button {
-  background-color: #ed8936; /* orange */
-  color: white;
-  border: none;
-  padding: 0.7rem 1.4rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.25s ease;
+section {
+  padding: 2rem;
 }
 
-.get-recipe-container button:hover {
-  background-color: #dd6b20; /* darker on hover */
+h1 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #1f2937; /* Tailwind's gray-800 */
+  margin-bottom: 1rem;
 }
 
-.remove-btn{
-  background-color: inherit;
-}
-.remove-btn:hover{
-  transform: scale(1.1);
-  background-color: inherit;
-  
-}
-
-/* "Get Recipe" container */
+#get-recipe-container,
 .get-recipe-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 8px;
-  background: #F0EFEB;
-  padding: 12px 24px;
-  width: 100%;
-  margin-top: 2rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  margin-top: 4rem;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(6px);
+  border: 1px solid #ffedd5; /* Tailwind's orange-100 */
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  max-width: 40rem;
+  min-width: 40rem;
+  text-align: center;
 }
 
 .get-recipe-container h3 {
-  font-size: 1.125rem;
-  font-weight: 600;
-  margin: 0;
-  color: #222;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
 }
 
 .get-recipe-container p {
-  color: #6B7280;
-  font-size: 0.875rem;
-  margin: 0;
+  color: #4b5563; /* Tailwind's gray-600 */
+  margin-bottom: 1rem;
 }
 
-/* Button inside get-recipe-container */
-.get-recipe-container button {
+/* Ingredient list container */
+#all-ingredient {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* Individual ingredient item */
+#all-ingredient span {
+  background: white;
+  border: 1px solid #fcd34d; /* yellow-300 */
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  display: flex;
+  
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  text-transform: capitalize;
+}
+
+
+#all-ingredient span:hover{
+  border: 2px solid #fcd34d;
+  transform: scale(1);
+}
+/* Remove button inside ingredient chip */
+.remove-btn {
+  background: none;
   border: none;
-  border-radius: 6px;
-  background: #D17557;
-  color: #FAFAF8;
-  padding: 9px 17px;
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.875rem;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: transform 0.2s ease;
+  
+}
+
+.remove-btn:hover {
+  transform: scale(1.1);
+  background-color: inherit;
+}
+
+/* Button style for Get Recipe */
+.get-recipe-container button {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  background: linear-gradient(to right, #fb923c, #ef4444);
+  color: white;
+  border: none;
+  border-radius: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: background 0.2s ease, transform 0.2s ease;
 }
 
 .get-recipe-container button:hover {
-  background-color: #b85f45;
-}
-.recipe-markdown {
-  background-color: #fffaf2;
-  border: 1px solid #eee;
-  padding: 1.5rem;
-  border-radius: 10px;
-  font-family: "Georgia", serif;
-  line-height: 1.7;
-  color: #333;
-  max-width: 700px;
-  margin: auto;
+  background: linear-gradient(to right, #f97316, #dc2626);
+  transform: translateY(-1px);
 }
 
-/* Markdown headings */
+
+.recipe-markdown{
+  
+}
 .recipe-markdown h1,
 .recipe-markdown h2,
 .recipe-markdown h3 {
   color: #b54b00;
   margin-top: 1.2em;
   margin-bottom: 0.5em;
+  
 }
 
 .recipe-markdown h1 {
@@ -260,15 +231,10 @@ button:hover {
 /* Paragraphs */
 .recipe-markdown p {
   margin-bottom: 1rem;
+  font-size: 1.1rem;
 }
 
-/* Code blocks or inline code (if present) */
-/* .recipe-markdown code {
-  background-color: #f6f6f6;
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-family: monospace;
-} */
+
 
 
 /* Responsive design for smaller screens */

@@ -8,7 +8,7 @@ import Recipe from './Recipe.jsx'
 import {getRecipe} from '../ai.js'
 
 function App() {
-    const [ingredient, setIngredient] = useState(['']);
+    const [ingredient, setIngredient] = useState([]);
     const [loading,setLoading] = useState(false)
     
     function handleSubmit(formData) {
